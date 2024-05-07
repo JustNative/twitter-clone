@@ -14,7 +14,8 @@ export const signInWithCredentials = async (values: z.infer<typeof loginFormSche
 
         await signIn("credentials", {
             email,
-            password
+            password,
+            redirectTo: '/'
         })
 
         revalidatePath('/')

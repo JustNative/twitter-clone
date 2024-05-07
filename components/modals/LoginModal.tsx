@@ -43,6 +43,9 @@ const LoginModal = () => {
       toast.success("Login Successful!")
       session.update();
 
+      setPassword('')
+      setEmail('')
+
     } catch (error: any) {
       console.log("Error on login: ", error);
       toast.error(error.message)
