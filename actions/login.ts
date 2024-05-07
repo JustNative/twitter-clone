@@ -45,7 +45,9 @@ export const signInWithCredentials = async (values: z.infer<typeof loginFormSche
 export const signOutAction = async () => {
     try {
 
-        await signOut();
+        await signOut({
+            redirectTo: '/'
+        });
 
         cookies().delete('authjs.session-token')
 
