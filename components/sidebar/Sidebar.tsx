@@ -15,6 +15,7 @@ const Sidebar = async () => {
   const session = await getSession();
   const authUser = await getUser(session?.user.id as string) as Omit<User, 'followersCount'>;
 
+  
   const items = [
     {
       icon: <BsHouseFill size={28} color="white" />,
